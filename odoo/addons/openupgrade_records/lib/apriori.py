@@ -67,6 +67,7 @@ merged_modules = {
     'account_move_chatter': 'account',
     'account_tag_menu': 'account_menu',
     'account_type_menu': 'account_menu',
+    'account_renumber': 'account',
     # OCA/account-invoicing
     'account_invoice_repair_link': 'repair',
     # OCA/account-reconcile
