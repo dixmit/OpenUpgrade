@@ -45,6 +45,18 @@ merged_modules = {
     "web_listview_range_select": "web",
     "web_pwa_oca": "web",
     # OCA/...
+    # custom modules
+    "contact": "base",
+    "email_company": "base",
+    "hr_costume": "hr",
+    "projects": "project",
+    "gender_contact": "base",
+    "jt_education_theme": "website",
+    "manatec_account": "account",
+    "manatec_reports": "base",
+    "manatec_sale": "sale",
+    "manatec_settings": "base",
+    "muk_web_theme": "web_responsive",
 }
 
 # only used here for upgrade_analysis
