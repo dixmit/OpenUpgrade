@@ -100,3 +100,57 @@ def migrate(env, version):
     _fill_res_company_alias_domain_id(env)
     _mail_alias_fill_alias_full_name(env)
     _mail_template_convert_report_template_m2o_to_m2m(env)
+
+    openupgrade.logged_query(
+        env.cr,
+        """
+    INSERT INTO mail_alias_domain (name, bounce_alias, catchall_alias)
+    VALUES ('TODELETEDOMAIN', 'bounce@TODELETEDOMAIN', 'catchall@TODELETEDOMAIN')
+    """,
+    )
+    # We need to add a domain this way because we need to avoid some code execution
+    openupgrade.logged_query(
+        env.cr,
+        """
+        SELECT id, email from res_company WHERE email is not null
+        """,
+    )
+    for company_id, email in env.cr.fetchall():
+        domain_name = email.split("@")[1]
+        domain = env["mail.alias.domain"].search([("name", "=", domain_name)])
+        if not domain:
+            domain = env["mail.alias.domain"].create(
+                {"name": domain_name, "company_ids": [(4, company_id)]}
+            )
+        else:
+            domain.write({"company_ids": [(4, company_id)]})
+        openupgrade.logged_query(
+            env.cr,
+            f"""
+            UPDATE res_company
+            SET alias_domain_id = {domain.id}
+            WHERE id = {company_id}
+            """,
+        )
+        openupgrade.logged_query(
+            env.cr,
+            f"""
+            UPDATE mail_alias ma
+            SET alias_domain_id = {domain.id}
+            FROM res_users ru
+            WHERE ru.id = ma.alias_user_id AND ru.company_id = {company_id}
+            """,
+        )
+    openupgrade.logged_query(
+        env.cr,
+        """
+    DELETE FROM mail_alias_domain  WHERE name= 'TODELETEDOMAIN'
+    """,
+    )
+    openupgrade.logged_query(
+        env.cr,
+        """
+        CREATE UNIQUE INDEX IF NOT EXISTS mail_alias_name_domain_unique
+            ON mail_alias (alias_name, COALESCE(alias_domain_id, 0))
+        """,
+    )

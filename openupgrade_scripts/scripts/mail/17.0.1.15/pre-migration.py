@@ -125,3 +125,17 @@ def migrate(env, version):
         ADD COLUMN IF NOT EXISTS alias_domain_id INTEGER;
         """,
     )
+    openupgrade.logged_query(
+        env.cr,
+        """
+        ALTER TABLE mail_alias
+        ADD COLUMN IF NOT EXISTS alias_domain_id INTEGER;
+        """,
+    )
+    openupgrade.logged_query(
+        env.cr,
+        """
+        CREATE UNIQUE INDEX IF NOT EXISTS mail_alias_name_domain_unique
+            ON mail_alias (alias_name, COALESCE(alias_domain_id, 0), id)
+        """,
+    )
