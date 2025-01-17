@@ -48,11 +48,12 @@ merged_modules = {
     # custom modules
     "contact": "base",
     "email_company": "base",
-    "hr_costume": "hr",
+    "hr_custome": "hr",
     "projects": "project",
     "gender_contact": "base",
     "jt_education_theme": "website",
     "manatec_account": "account",
+    "manatec_company": "base",
     "manatec_reports": "base",
     "manatec_sale": "sale",
     "manatec_settings": "base",
