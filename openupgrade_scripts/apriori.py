@@ -120,6 +120,19 @@ merged_modules = {
     "web_drop_target": "web",
     "web_ir_actions_act_view_reload": "web",
     "web_tree_image_tooltip": "web",
+    # CB
+    "thingsintouch_ras_attendance": "iot_oca",
+    "thingsintouch_ras_simplified": "iot_oca",
+    "iot_option_oca": "iot_oca",
+    "iot_key_employee_rfid": "iot_oca",
+    "l10n_es_facturae_efact": "l10n_es_facturae_face",
+    "l10n_es_payment_ratio": "l10n_es",
+    "account_invoice_google_document_ai_purchase": "account",
+    "account_asset_management_menu": "account_asset_management",
+    "base_custom_info": "base",
+    "mass_operation_abstract": "base",
+    "account_comment_template": "account",
+    "onchange_helper": "base",
 }
 
 # only used here for upgrade_analysis
