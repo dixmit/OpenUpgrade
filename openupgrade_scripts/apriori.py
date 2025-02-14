@@ -134,6 +134,7 @@ merged_modules = {
     "mass_operation_abstract": "base",
     "account_comment_template": "account",
     "onchange_helper": "base",
+    "product_analytic_donation": "donation",
 }
 
 # only used here for upgrade_analysis
