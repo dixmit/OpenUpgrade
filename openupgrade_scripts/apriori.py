@@ -134,6 +134,7 @@ merged_modules = {
     "mass_operation_abstract": "base",
     "account_comment_template": "account",
     "onchange_helper": "base",
+    "pos_inter_company": "point_of_sale",
 }
 
 # only used here for upgrade_analysis
