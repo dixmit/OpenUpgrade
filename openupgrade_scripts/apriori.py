@@ -136,6 +136,7 @@ merged_modules = {
     "onchange_helper": "base",
     "product_analytic_donation": "donation",
     "base_business_document_import": "base",
+    "web_domain_field": "web",
 }
 
 # only used here for upgrade_analysis
