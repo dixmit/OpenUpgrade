@@ -135,6 +135,7 @@ merged_modules = {
     "account_comment_template": "account",
     "onchange_helper": "base",
     "product_analytic_donation": "donation",
+    "base_business_document_import": "base",
 }
 
 # only used here for upgrade_analysis
