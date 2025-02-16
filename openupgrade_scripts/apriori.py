@@ -137,6 +137,7 @@ merged_modules = {
     "product_analytic_donation": "donation",
     "base_business_document_import": "base",
     "web_domain_field": "web",
+    "cb_maintenance_project": "cb_maintenance",
 }
 
 # only used here for upgrade_analysis
