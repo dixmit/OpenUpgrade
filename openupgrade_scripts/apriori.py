@@ -144,6 +144,7 @@ merged_modules = {
     "base_business_document_import": "base",
     "web_domain_field": "web",
     "cb_maintenance_project": "cb_maintenance",
+    "cmis": "fs_storage",
 }
 
 # only used here for upgrade_analysis
