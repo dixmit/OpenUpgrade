@@ -145,6 +145,8 @@ merged_modules = {
     "web_domain_field": "web",
     "cb_maintenance_project": "cb_maintenance",
     "cmis": "fs_storage",
+    "cb_medical_his": "medical_base",
+    "cb_mis_builder": "mis_builder",
 }
 
 # only used here for upgrade_analysis
