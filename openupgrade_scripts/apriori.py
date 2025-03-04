@@ -147,6 +147,7 @@ merged_modules = {
     "cmis": "fs_storage",
     "cb_medical_his": "medical_base",
     "cb_mis_builder": "mis_builder",
+    "medical_turn_management": "base",
 }
 
 # only used here for upgrade_analysis
