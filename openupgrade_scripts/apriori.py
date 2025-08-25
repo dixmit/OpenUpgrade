@@ -83,6 +83,14 @@ merged_modules = {
     # OCA/...
 }
 
+# Dixmit Modules
+merged_modules.update(
+    {
+        "module_auto_update": "base",
+        "account_invoice_constraint_chronology": "account",
+    }
+)
+
 # only used here for upgrade_analysis
 renamed_models = {
     # odoo
