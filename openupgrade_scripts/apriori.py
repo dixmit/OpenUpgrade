@@ -36,6 +36,8 @@ renamed_modules = {
     "stock_picking_type_shipping_policy": "stock_picking_type_force_move_type",
     # OCA/web
     "web_widget_product_label_section_and_note": "web_widget_product_label_section_and_note_name_visibility",  # noqa: E501
+    # PRIVATE MODULES
+    "cyb_asigna_api": "delivery_asigna",
     # OCA/...
 }
 
@@ -80,6 +82,8 @@ merged_modules = {
     "sale_order_qty_change_no_recompute": "sale",
     # OCA/server-brand
     "hr_expense_remove_mobile_link": "hr_expense",
+    # PRIVATE MODULES
+    "common_connector_library": "base",
     # OCA/...
 }
 
