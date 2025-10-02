@@ -83,6 +83,8 @@ merged_modules = {
     "sale_order_qty_change_no_recompute": "sale",
     # OCA/server-brand
     "hr_expense_remove_mobile_link": "hr_expense",
+    # PRIVATE MODULES
+    "website_sale_product_tag": "website_sale",
     # OCA/...
 }
 
