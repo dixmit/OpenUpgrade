@@ -84,6 +84,9 @@ merged_modules = {
     "hr_expense_remove_mobile_link": "hr_expense",
     # PRIVATE MODULES
     "common_connector_library": "base",
+    "a3_export_csv": "base",
+    "website_sale_product_tag": "website_sale",
+    "pos_product_security": "point_of_sale",
     # OCA/...
 }
 
