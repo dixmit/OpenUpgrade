@@ -7,7 +7,7 @@ _logger = logging.getLogger(__name__)
 
 
 @openupgrade.migrate()
-def migrate(env, cr):
+def migrate(env, version):
     views = env["ir.ui.view"].search(
         [("arch_db", "like", "expr=\"//div[@id='snippet_custom']\"")]
     )
